@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Demo</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+	<div ng-controller="mainCtrl">
+	<sidebar id="sidebar1" size="400" position="left" is-expanded="true">
+		<div class="sidebarHeader">
+			<p>Menu</p>
+		</div>
+		<ul>
+			<li>is a item</li>
+			<li>is a item</li>
+			<li>is a item</li>
+			<li>is a item</li>
+			<li>is a item</li>
+			<li>is a item</li>
+		</ul>
+	</sidebar>
+	<div class="container-fluid">
+		<div ui-view></div>
+	</div>
+	</div>
+</body>
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/angular-1.6.5.min.js"></script>
+	<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="lib/angular-material.min.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular-aria.min.js"></script>
+    <script type="text/javascript" src="lib/angular-messages.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.slim.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/vendor.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+</html>

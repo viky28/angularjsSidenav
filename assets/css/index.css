@@ -1,4 +1,6 @@
-
+html,body {
+  height: 100%;
+}
 .navbar {
   background-color: #06a0d8;
   height: 150px;
@@ -10,7 +12,7 @@
   border-bottom: 1px solid white;
 }
 .sidebarHeader p {
-  padding: 7% 0% 0% 2%;
+  padding: 7% 0% 0% 0%;
   color: white;
 }
 .container-fluid {

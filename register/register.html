@@ -1,4 +1,37 @@
-<!-- <div ui-view='header'></div> -->
+<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+<div ui-view='header'></div>
+<div class="loading-spiner-holder" data-loading ><div class="loading-spiner">Loading.......</div></div>
 <div ng-controller="registerCtrl">
-	<p>{{title}}</p>
+    <div class="form-wrap">
+    	<form>
+		  <div class="group">      
+		    <input type="text" required>
+		    <span class="highlight"></span>
+		    <span class="bar"></span>
+		    <label>Name</label>
+		  </div>
+
+		  <div class="group">      
+		    <input type="text" required>
+		    <span class="highlight"></span>
+		    <span class="bar"></span>
+		    <label>Email</label>
+		  </div>
+
+		  <div class="group">      
+		    <input type="password" required>
+		    <span class="highlight"></span>
+		    <span class="bar"></span>
+		    <label>Password</label>
+		  </div>
+
+		  <div class="btn-div">
+		  	<button class="btn btn-info">Register</button>
+		  </div>
+
+		  <div style="font-size: 30px; text-align: center;padding-top: 5%">
+		  	<a href="" ng-click="gotoLogin()">Already Register ? SignIn Here !</a>
+		  </div>
+		</form>
+    </div>
 </div>

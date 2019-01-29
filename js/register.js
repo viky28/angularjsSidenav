@@ -1,4 +1,6 @@
 angular.module('demo.register',[])
-.controller('registerCtrl',['$scope', function($scope){
-	$scope.title = "This is registration page"
+.controller('registerCtrl',['$scope','$location', function($scope,$location){
+	$scope.gotoLogin = function(){
+		$location.path('/')
+	}
 }])

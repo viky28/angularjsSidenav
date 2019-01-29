@@ -1,4 +1,16 @@
-<!-- <div ui-view='header'></div> -->
+<link rel="stylesheet" type="text/css" href="assets/css/user.css">
+<div ui-view='header'></div>
 <div ng-controller="userCtrl">
-	<p>{{title}}</p>
+    <div class="row">
+        <form class="col-md-12 py-2">
+            <div class="input-group">
+                <input type="text" class="form-control typeahead border-primary" name="query" id="query" placeholder="Start typing something to search..." data-provide="typeahead" autocomplete="off">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

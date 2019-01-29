@@ -1,4 +1,43 @@
+<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 <div ui-view='header'></div>
+<div class="loading-spiner-holder" data-loading ><div class="loading-spiner">Loading.......</div></div>
 <div ng-controller="loginCtrl">
-	<p>{{title}}</p>
+    <div class="form-wrap">
+    	<form name="loginForm" ng-submit="loginForm.$valid && doLogin()" novalidate>
+
+		  <div class="group">      
+		    <input type="text" name="email" ng-model="user.email" required ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
+		    <span class="highlight"></span>
+		    <span class="bar"></span>
+		    <label for="email">Email</label>
+
+		    <div ng-if="submit || loginForm.email.$dirty" 
+			    ng-messages="loginForm.email.$error" style="color:red" role="alert">
+			    <div ng-message="required">You did not enter a field !</div>
+			    <div ng-message="pattern">Email is not valid !</div>
+			</div>
+		  </div>
+
+		  <div class="group">      
+		    <input type="password" name="psw" ng-model="user.password" required>
+		    <span class="highlight"></span>
+		    <span class="bar"></span>
+		    <label>Password</label>
+
+		    <div ng-if="submit || loginForm.psw.$dirty" 
+			    ng-messages="loginForm.psw.$error" style="color:red" role="alert">
+			    <div ng-message="required">You did not enter a field !</div>
+			</div>
+		  </div>
+
+		  <div class="btn-div">
+		  	<p style="color: red; font-size: 28px;">{{errorMsg}}</p>
+		  	<button class="btn btn-info" ng-click="submit=true">Login</button>
+		  </div>
+
+		  <div style="font-size: 30px; text-align: center;padding-top: 5%">
+		  	<a href="" ng-click="gotoRegister()">New User ? SignUp Here !</a>
+		  </div>
+		</form>
+    </div>
 </div>

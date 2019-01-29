@@ -58,10 +58,9 @@ app.config(function($stateProvider,$urlRouterProvider){
 	})
 })
 .controller('mainCtrl',['$scope','$location','$rootScope', function($scope,$location,$rootScope){
-	var local = JSON.parse(localStorage.getItem('userData'));
-	$rootScope.local = local;
 	$rootScope.Logout = function(){
 		localStorage.clear();
+		$scope.sidebarToggle = true;
 		$location.path('/')
 	}
 }])
@@ -75,3 +74,26 @@ app.config(function($stateProvider,$urlRouterProvider){
 		}
 	}
 })
+
+.directive('loading',   ['$http' ,function ($http)
+{
+    return {
+        restrict: 'A',
+        link: function (scope, elm, attrs)
+        {
+            scope.isLoading = function () {
+                return $http.pendingRequests.length > 0;
+            };
+
+            scope.$watch(scope.isLoading, function (v)
+            {
+                if(v){
+                    elm.show();
+                }else{
+                    elm.hide();
+                }
+            });
+        }
+    };
+
+}]);

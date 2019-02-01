@@ -1,16 +1,64 @@
 <link rel="stylesheet" type="text/css" href="assets/css/user.css">
 <div ui-view='header'></div>
-<div ng-controller="userCtrl">
-    <div class="row">
-        <form class="col-md-12 py-2">
-            <div class="input-group">
-                <input type="text" class="form-control typeahead border-primary" name="query" id="query" placeholder="Start typing something to search..." data-provide="typeahead" autocomplete="off">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-outline-primary">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+
+<div class='typeahead-demo' ng-controller="userCtrl">
+  <div>
+    <input type="text" ng-model="selected" uib-typeahead="cat for cat in categories | filter:$viewValue | limitTo:8" class="form-control" placeholder="Search..">
+  </div>
+    
+    <!-- <h4>Asynchronous results</h4>
+    <pre>Model: {{asyncSelected | json}}</pre>
+    <input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" uib-typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+      <i class="glyphicon glyphicon-remove"></i> No Results Found
     </div>
-</div>
+
+    <h4>ngModelOptions support</h4>
+    <pre>Model: {{ngModelOptionsSelected | json}}</pre>
+    <input type="text" ng-model="ngModelOptionsSelected" ng-model-options="modelOptions" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+
+    <h4>Custom templates for results</h4>
+    <pre>Model: {{customSelected | json}}</pre>
+    <input type="text" ng-model="customSelected" placeholder="Custom template" uib-typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-show-hint="true" typeahead-min-length="0">
+
+    <h4>Custom popup templates for typeahead's dropdown</h4>
+    <pre>Model: {{customPopupSelected | json}}</pre>
+    <input type="text" ng-model="customPopupSelected" placeholder="Custom popup template" uib-typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue}" typeahead-popup-template-url="customPopupTemplate.html" class="form-control"> -->
+
+  <div class="row categoriesList">
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+  </div>
+  <div class="row">
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+  </div>
+  <div class="row">
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+  </div>
+  <div class="row">
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+    <div class="col"><img src="img/categories.png"></div>
+    <div class="col"><img src="img/coupon_cart.png"></div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="card" style="width: 96%;margin-left: 2%">
+      <img class="card-img-top" src="img/offer.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Festive Offer</h5>
+        <p class="card-text">New festive offer is available.To avail this offer Please click on below button</p>
+        <a href="#" class="btn btn-primary">See More</a>
+      </div>
+    </div>
+  </div>
+</div> 

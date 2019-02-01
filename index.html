@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/angular-auto-complete.css">
 </head>
 <body>
 	<div ng-controller="mainCtrl">
@@ -17,28 +18,28 @@
 		<ul class="list-group">
 		  <li class="list-group-item d-flex justify-content-between align-items-center">
 		    <p>Profile</p>
-		    <span class="badge badge-primary badge-pill">40</span>
+		    <span><i class="fa fa-vcard" style="font-size: 48px; color: #06a0d8"></i></span>
 		  </li>
 		  <li class="list-group-item d-flex justify-content-between align-items-center">
 		    <p>Help</p>
-		    <span class="badge badge-primary badge-pill">50</span>
+		    <span><i class="fa fa-info-circle" style="font-size:48px;color:#06a0d8;"></i></span>
 		  </li>
 		  <li class="list-group-item d-flex justify-content-between align-items-center">
 		    <p>Settting</p>
-		    <span class="badge badge-primary badge-pill">99</span>
+		    <span><i class='fa fa-cogs' style='font-size:48px;color:#06a0d8;'></i></span>
 		  </li>
 		  <li class="list-group-item d-flex justify-content-between align-items-center">
 		    <p>History</p>
-		    <span class="badge badge-primary badge-pill">99</span>
+		    <span><i class="fa fa-history" style='font-size:48px;color:#06a0d8;'></i></span>
 		  </li>
 		  <li class="list-group-item d-flex justify-content-between align-items-center" ng-click="Logout()">
 		    <p>Logout</p>
-		    <span class="badge badge-primary badge-pill">99</span>
+		    <span><i class="fa fa-power-off" style='font-size:48px;color:#06a0d8;'></i></span>
 		  </li>
 		</ul>
 	</sidebar>
 	<div class="container-fluid">
-		<div class="loading-spiner-holder" data-loading ><div class="loading-spiner">Loading.......</div></div>
+		<!-- <div class="loading-spiner-holder" data-loading ><div class="loading-spiner">Loading.......</div></div> -->
 		<div ui-view></div>
 	</div>
 	</div>
@@ -55,6 +56,10 @@
 	<script type="text/javascript" src="lib/jquery.slim.min.js"></script>
 	<script type="text/javascript" src="lib/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/underscore.js"></script>
+	<script type="text/javascript" src="js/angular-auto-complete.js"></script>
+	<script type="text/javascript" src="lib/ui-bootstrap4.min.js"></script>
+	<script type="text/javascript" src="lib/ui-bootstrap4.tpls.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="js/sidebar.js"></script>
     <script type="text/javascript" src="js/header.js"></script>

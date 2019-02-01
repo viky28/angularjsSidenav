@@ -1,0 +1,34 @@
+[
+	{
+		"catid":"1",
+		"catname":"SHOPPING"
+	},
+	{
+		"catid":"2",
+		"catname":"MOVIES"
+	},
+	{
+		"catid":"3",
+		"catname":"RESTAURENTS"
+	},
+	{
+		"catid":"4",
+		"catname":"DOCTORS"
+	},
+	{
+		"catid":"5",
+		"catname":"TRAVEL"
+	},
+	{
+		"catid":"6",
+		"catname":"HOTELS"
+	},
+	{
+		"catid":"7",
+		"catname":"RECHARGE"
+	},
+	{
+		"catid":"8",
+		"catname":"REPAIR"
+	}
+]

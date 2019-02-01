@@ -1,8 +1,36 @@
+.typeahead-demo {
+    padding: 2%;
+}
+.typeahead-demo .custom-popup-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+  .typeahead-demo .custom-popup-wrapper > .message {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #868686;
+}
+
+  .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+    position: static;
+    float: none;
+    display: block;
+    min-width: 160px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
 .form-control {
     display: block;
     width: 100%;
-    padding: 1.375rem 1.75rem;
-    font-size: 1.5rem;
+    padding: .375rem .75rem;
+    font-size: 2rem;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
@@ -10,4 +38,28 @@
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 95.5%;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 2rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.categoriesList{
+    padding-top: 5%;
 }

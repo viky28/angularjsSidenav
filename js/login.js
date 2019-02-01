@@ -8,7 +8,12 @@ angular.module('demo.login',['ngStorage','ngMessages'])
 			angular.forEach(data.data, function(v,k){
 				if($scope.user.email===v.email && $scope.user.password===v.password){
 					$localStorage.userData = {email:v.email,password:v.password}
-					$location.path('/user')
+					if(v.userType==='user'){
+						$location.path('/user')
+					} else if(v.userType==='vendor'){
+						$location.path('/vendor')
+					}
+					
 					return;
 				} else {
 					$scope.errorMsg = "Wrong Credentials !";

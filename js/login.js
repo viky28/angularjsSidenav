@@ -1,6 +1,6 @@
 angular.module('demo.login',['ngStorage','ngMessages'])
 .controller('loginCtrl',['$scope','$location','$http','$localStorage','$timeout', function($scope,$location,$http,$localStorage,$timeout){
-
+	
 	$scope.doLogin = function(){
 		$http.get('credentials.json')
 		.then(function(data){

@@ -57,22 +57,18 @@ app.config(function($stateProvider,$urlRouterProvider){
 		}
 	})
 })
-.controller('mainCtrl',['$scope','$location','$rootScope', function($scope,$location,$rootScope){
+.controller('mainCtrl',['$scope','$location','$rootScope','$localStorage', function($scope,$location,$rootScope,$localStorage){
+	if($localStorage.userData==='undefined'){
+		console.log("in run")
+		$location.path('/')
+	}
 	$rootScope.Logout = function(){
 		localStorage.clear();
-		$scope.sidebarToggle = true;
 		$location.path('/')
 	}
 }])
-.run(function($rootScope,$location){
-	var local = JSON.parse(localStorage.getItem('userData'));
-	if(local){
-		if(local.userType==="customer"){
-			$location.path('/customer')
-		} else if(local.userType==="agent") {
-			$location.path('/agent')
-		}
-	}
+.run(function($rootScope,$location,$localStorage){
+	
 })
 
 .directive('loading',   ['$http' ,function ($http)
